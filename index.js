@@ -1,4 +1,8 @@
 function boton(){
 let texto = document.getElementById('participantes').value;
-console.log(texto);
+let participantes = texto.split(",");
+for(let i = 0; i < participantes.length; i++){
+    console.log(participantes[i]);   
+}
+
 };
