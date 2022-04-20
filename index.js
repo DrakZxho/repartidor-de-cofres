@@ -8,6 +8,7 @@ function boton(){
     }
     for(let i = 0; i < cofres; i++){
         let aleatorio =  Math.floor(Math.random()*(participantes.length-1));
+        console.log(aleatorio);
         cofres[aleatorio]++;
     }
     for(let i = 0; i < participantes.length; i++){
