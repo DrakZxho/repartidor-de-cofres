@@ -5,6 +5,7 @@ function boton(){
     let premios = new Array;
     let resultado = "<table><tr>";
     const aux = Math.trunc(participantes.length/10);
+    const aux2 = participantes.length - aux*10;
     for(let i = 0; i < participantes.length; i++){
         premios.push(0);  
     }
@@ -16,13 +17,17 @@ function boton(){
         resultado += "<th>nombre</th><th>cofres</th>";
     }
     resultado += "</tr>";
+    for(let i = 0; i < aux2; i++){
+        participantes.push("");
+        premios.push("");
+    }
     for(let i = 0; i < 10; i++){
         if (participantes[i]){
             resultado += "<tr><td>"+participante[i]+"</td><td>"+premios[i]+"</td>";
             for(let j = 1; j <= aux;j++){
-                let aux2 = j*10 + i;
-                if (participantes[aux2]){
-                    resultado += "<tr><td>"+participante[aux2]+"</td><td>"+premios[aux2]+"</td>";
+                let aux3 = j*10 + i;
+                if (participantes[aux3]){
+                    resultado += "<tr><td>"+participante[aux3]+"</td><td>"+premios[aux3]+"</td>";
                 }
             }
             resultado += "</tr>";
