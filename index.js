@@ -22,7 +22,7 @@ function boton(){
             for(let j = 1; j <= aux;j++){
                 let aux2 = j*10 + i;
                 if (participantes[aux2]){
-                    resultado += "<tr><td>"+participantes[aux2]+"</td><td>"+premios[aux2]+"</td>";
+                    resultado += "<td>"+participantes[aux2]+"</td><td>"+premios[aux2]+"</td>";
                 }
             }
             resultado += "</tr>";
