@@ -17,11 +17,11 @@ function boton(){
     }
     resultado += "</tr>";
     for(let i = 0; i < 10; i++){
-        if (participantes[i]!==undefined){
+        if (participantes[i]){
             resultado += "<tr><td>"+participante[i]+"</td><td>"+premios[i]+"</td>";
             for(let j = 1; j <= aux;j++){
                 let aux2 = j*10 + i;
-                if (participantes[aux2]!==undefined){
+                if (participantes[aux2]){
                     resultado += "<tr><td>"+participante[aux2]+"</td><td>"+premios[aux2]+"</td>";
                 }
             }
