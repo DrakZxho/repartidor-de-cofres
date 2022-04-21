@@ -30,5 +30,5 @@ function boton(){
     }
     resultado += "</table>";
     console.log(resultado);
-    document.getElementById("resultado").innerHTML(resultado);
+    document.getElementById("resultado").innerHTML = resultado;
 };
