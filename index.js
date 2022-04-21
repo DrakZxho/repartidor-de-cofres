@@ -1,5 +1,5 @@
 function boton(){
-    const cofres = document.getElementById('cofres').value;
+    const cofres = document.getElementById('cofres').value / 5;
     let texto = document.getElementById('participantes').value;
     let participantes = texto.split(",");
     let premios = new Array;
@@ -10,7 +10,7 @@ function boton(){
     }
     for(let i = 0; i < cofres; i++){
         let aleatorio =  Math.floor(Math.random()*(participantes.length));
-        premios[aleatorio]++;
+        premios[aleatorio] += 5;
     }
     for(let i = 0; i <= aux; i++){
         resultado += "<th>nombre</th><th>cofres</th>";
@@ -29,6 +29,5 @@ function boton(){
         }     
     }
     resultado += "</table>";
-    console.log(resultado);
     document.getElementById("resultado").innerHTML = resultado;
 };
