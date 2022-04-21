@@ -3,18 +3,32 @@ function boton(){
     let texto = document.getElementById('participantes').value;
     let participantes = texto.split(",");
     let premios = new Array;
-    let total = 0;
+    let resultado = "<table><tr>";
+    const aux = Math.trunc(participantes.length/10);
     for(let i = 0; i < participantes.length; i++){
         premios.push(0);  
     }
     for(let i = 0; i < cofres; i++){
         let aleatorio =  Math.floor(Math.random()*(participantes.length));
-        console.log(aleatorio);
         premios[aleatorio]++;
     }
-    for(let i = 0; i < participantes.length; i++){
-        console.log(participantes[i] + " " + premios[i]);   
-        total+=premios[i];
+    for(let i = 0; i <= aux; i++){
+        resultado += "<th>nombre</th><th>cofres</th>";
     }
-    console.log(total);
+    resultado += "</tr>";
+    for(let i = 0; i < 10; i++){
+        if (participantes[i]!==undefined){
+            resultado += "<tr><td>"+participante[i]+"</td><td>"+premios[i]+"</td>";
+            for(let j = 1; j <= aux;j++){
+                let aux2 = j*10 + i;
+                if (participantes[aux2]!==undefined){
+                    resultado += "<tr><td>"+participante[aux2]+"</td><td>"+premios[aux2]+"</td>";
+                }
+            }
+            resultado += "</tr>";
+        }     
+    }
+    resultado += "</table>";
+    console.log(resultado);
+    document.getElementById("resultado").innerHTML(resultado);
 };
