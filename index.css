@@ -3,12 +3,38 @@
 }
 body{
     background-color: lemonchiffon;
+    padding: 10px;
 }
-.conjunto{
+#conjunto{
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
     width: fit-content;
     height: fit-content;
     background-color: aqua;
+    padding: 30px;
+    box-shadow: 5px 5px rgba(137, 43, 226, 0.9);
+    margin: 20px auto;
 }
-#boton{
-    border-radius: 2px;
+.boton{
+    border-radius: 20px;
+    background-color: #ff80c0;
+    border: 1px solid #eb4698;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    box-shadow: 3px 3px #eb4699e5;
+}
+strong{
+    color: #eb4698;
+}
+table{
+    margin: 15px auto;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
 }
