@@ -1,3 +1,14 @@
 *{
     font-family: "Quicksand", sans-serif;
 }
+body{
+    background-color: lemonchiffon;
+}
+.conjunto{
+    width: fit-content;
+    height: fit-content;
+    background-color: aqua;
+}
+#boton{
+    border-radius: 2px;
+}
