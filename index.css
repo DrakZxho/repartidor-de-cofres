@@ -16,6 +16,19 @@ body{
     box-shadow: 5px 5px rgba(137, 43, 226, 0.9);
     margin: 20px auto;
 }
+input, label, p{
+    margin: 10px auto 5px auto;
+}
+table{
+    text-align: center;
+}
+.amount{
+    color: #eb4698;
+    font-weight: bold;
+}
+.name{
+    text-decoration: underline dotted;
+}
 .boton{
     border-radius: 20px;
     background-color: #ff80c0;
