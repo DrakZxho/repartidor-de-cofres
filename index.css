@@ -51,3 +51,9 @@ table{
     border: 2px solid blueviolet;
     border-radius: 20px;
 }
+#cofres, #intervalo{
+    width: 35px
+}
+#participantes{
+    width: 100%;
+}
