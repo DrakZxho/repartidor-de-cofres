@@ -6,16 +6,6 @@ let premios = new Array;
 let resultado = "<table><tr>";
 const aux = Math.trunc(participantes.length / intervalo);
 
-function repartir(){
-    for(let i = 0; i < participantes.length; i++){
-        premios.push(0);  
-    }
-    for(let i = 0; i < cofres; i++){
-        let aleatorio =  Math.floor(Math.random()*(participantes.length));
-        premios[aleatorio] += 1;
-    }
-    mostrar();    
-};
 function mostrar(){
     for(let i = 0; i <= aux; i++){
         resultado += "<th>NOMBRE</th><th>COFRES</th>";
@@ -36,4 +26,15 @@ function mostrar(){
     resultado += "</table>";
     resultado += "<p>Cofres repartidos <strong>" + cofres + "<strong>.</p>"
     document.getElementById("resultado").innerHTML = resultado;
-};
+}
+
+function repartir(){
+    for(let i = 0; i < participantes.length; i++){
+        premios.push(0);  
+    }
+    for(let i = 0; i < cofres; i++){
+        let aleatorio =  Math.floor(Math.random()*(participantes.length));
+        premios[aleatorio] += 1;
+    }
+    mostrar();    
+}
