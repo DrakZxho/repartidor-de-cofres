@@ -1,4 +1,4 @@
-function boton(){
+function repartir(){
     const cofres = document.getElementById('cofres').value * 5;
     let texto = document.getElementById('participantes').value;
     let participantes = texto.split(",");
@@ -13,22 +13,28 @@ function boton(){
         premios[aleatorio] += 1;
     }
     for(let i = 0; i <= aux; i++){
-        resultado += "<th>nombre</th><th>cofres</th>";
+        if(i == 0)
+        resultado += "<th>NOMBRE</th><th>COFRES</th>";
+        else resultado += "<th>NOMBRE</th><th>COFRES</th><th></th>";
     }
     resultado += "</tr>";
     for(let i = 0; i < 10; i++){
         if (participantes[i]){
-            resultado += "<tr><td>"+participantes[i]+"</td><td>"+premios[i]+"</td>";
+            if (aux<1)
+            resultado += "<tr><td class=\"name\">"+participantes[i]+"</td><td class=\"amount\">"+premios[i]+"</td>";
+            else resultado += "<tr><td class=\"name\">"+participantes[i]+"</td><td class=\"amount\">"+premios[i]+"</td><td></td>";
             for(let j = 1; j <= aux;j++){
                 let aux2 = j*10 + i;
                 if (participantes[aux2]){
-                    resultado += "<td>"+participantes[aux2]+"</td><td>"+premios[aux2]+"</td>";
+                    if (j<aux)
+                    resultado += "<td class=\"name\">"+participantes[aux2]+"</td><td class=\"amount\">"+premios[aux2]+"</td>";
+                    else resultado += "<td class=\"name\">"+participantes[aux2]+"</td><td class=\"amount\">"+premios[aux2]+"</td><td></td>";
                 }
             }
             resultado += "</tr>";
         }     
     }
     resultado += "</table>";
-    resultado += "<h3>Cofres repartidos" + cofres + "</h3>"
+    resultado += "<p>Cofres repartidos <strong>" + cofres + "<strong>.</p>"
     document.getElementById("resultado").innerHTML = resultado;
 };
