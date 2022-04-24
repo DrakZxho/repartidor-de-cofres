@@ -26,7 +26,7 @@ function repartir(){
             for(let j = 1; j <= aux;j++){
                 let aux2 = j*10 + i;
                 if (participantes[aux2]){
-                    if (j<aux)
+                    if (j < aux)
                     resultado += "<td class=\"name\">"+participantes[aux2]+"</td><td class=\"amount\">"+premios[aux2]+"</td>";
                     else resultado += "<td class=\"name\">"+participantes[aux2]+"</td><td class=\"amount\">"+premios[aux2]+"</td><td></td>";
                 }
