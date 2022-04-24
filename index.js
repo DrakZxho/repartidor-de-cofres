@@ -1,12 +1,12 @@
-function repartir(){
-    const cofres = document.getElementById('cofres').value * 5;
-    const intervalo = (document.getElementById('intervalo').value && document.getElementById('intervalo').value>0) ? document.getElementById('intervalo').value : 10;
-    let texto = document.getElementById('participantes').value;
-    let participantes = texto.split(",");
-    let premios = new Array;
-    
+let premios = new Array;
+let participantes;
+let cofres;
 
-    const aux = Math.trunc(participantes.length / intervalo);
+function repartir(){
+    cofres = document.getElementById('cofres').value * 5;
+    let texto = document.getElementById('participantes').value;
+    participantes = texto.split(",");
+
     for(let i = 0; i < participantes.length; i++){
         premios.push(0);  
     }
@@ -14,7 +14,14 @@ function repartir(){
         let aleatorio =  Math.floor(Math.random()*(participantes.length));
         premios[aleatorio] += 1;
     }
+    mostrar();
+};
+
+function mostrar(){
+    let intervalo = (document.getElementById('intervalo').value && document.getElementById('intervalo').value>0) ? document.getElementById('intervalo').value : 10;
+    const aux = Math.trunc(participantes.length / intervalo);
     let resultado = "<table><tr>";
+
     for(let i = 0; i <= aux; i++){
         resultado += "<th>NOMBRE</th><th>COFRES</th>";
     }
@@ -34,6 +41,4 @@ function repartir(){
     resultado += "</table>";
     resultado += "<p>Cofres repartidos <strong>" + cofres + "<strong>.</p>"
     document.getElementById("resultado").innerHTML = resultado;
-};
-function mostrar(){
 };
