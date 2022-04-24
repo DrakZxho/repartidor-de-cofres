@@ -8,11 +8,14 @@
         <script src="index.js"></script>
     </head>
     <body>
-        <label for="participantes">Participantes</label>       
+        <label for="participantes">Participantes: </label>       
         <input type="text" name="participantes" id="participantes">    
-        <label for="cofres">Nº de cartas canjeadas</label>
+        <label for="cofres">Nº de cartas canjeadas: </label>
         <input type="number" name="cofres" id="cofres"><br/>
-        <input type="button" value="REPARTIR" id="boton" onclick="repartir();">
-        <div id="resultado"></div>        
+        <input type="button" value="REPARTIR" id="repartir" onclick="repartir();">
+        <div id="resultado"></div>  
+        <label for="intervalo">Mostrar cada: </label>       
+        <input type="number" name="intervalo" id="intervalo"><br/>
+        <input type="button" value="MOSTRAR" id="mostrar" onclick="mostrar();">      
     </body>
 </html>
