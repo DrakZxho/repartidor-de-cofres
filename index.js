@@ -1,6 +1,6 @@
 function repartir(){
     const cofres = document.getElementById('cofres').value * 5;
-    const intervalo = document.getElementById('intervalo').value | 10;
+    const intervalo = document.getElementById('intervalo').value ? document.getElementById('intervalo').value : 10;
     let texto = document.getElementById('participantes').value;
     let participantes = texto.split(",");
     let premios = new Array;
