@@ -19,7 +19,7 @@ function repartir(){
 
 function mostrar(){
     let intervalo = (document.getElementById('intervalo').value && document.getElementById('intervalo').value>0) ? document.getElementById('intervalo').value : 10;
-    const aux = (participantes.length % interval == 0) ? participantes.length / intervalo - 1 : Math.trunc(participantes.length / intervalo);
+    const aux = (participantes.length % interval == 0) ? (participantes.length / intervalo - 1) : (Math.trunc(participantes.length / intervalo));
     let resultado = "<table><tr>";
 
     for(let i = 0; i <= aux; i++){
