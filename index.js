@@ -39,7 +39,7 @@ function mostrar(){
         }     
     }
     resultado += "</table>";
-    resultado += "<p>Cofres repartidos <strong>" + cofres + "<strong>.</p>";
+    resultado += "<p>Cofres repartidos <strong>" + cofres + "</strong>.</p>";
     resultado += "<label for=\"intervalo\">Mostrar cada: </label>";       
     resultado += "<input type=\"number\" name=\"intervalo\" id=\"intervalo\" value=\"" + intervalo + "\"><br/>";
     resultado += "<input type=\"button\" value=\"MOSTRAR\" id=\"mostrar\" onclick=\"mostrar();\">";

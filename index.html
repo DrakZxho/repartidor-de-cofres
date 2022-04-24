@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
         <title>Repartidor de cofres</title>
+        <link rel="icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
@@ -11,13 +12,13 @@
     </head>
     <body>
         <label for="participantes">Participantes: </label>       
-        <input type="text" name="participantes" id="participantes">    
+        <input type="text" name="participantes" id="participantes"><br/>    
         <label for="cofres">Nº de cartas canjeadas: </label>
         <input type="number" name="cofres" id="cofres"><br/>
         <input type="button" value="REPARTIR" id="repartir" onclick="repartir();">
         <div id="resultado">
             <label for="intervalo">Mostrar cada: </label>       
-            <input type="number" name="intervalo" id="intervalo"><br/>
+            <input type="number" name="intervalo" id="intervalo">
         </div> 
     </body>
 </html>
