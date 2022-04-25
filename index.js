@@ -3,6 +3,7 @@ let participantes;
 let cofres;
 
 function repartir(){
+    let premios = [];
     cofres = document.getElementById('cofres').value * 5;
     let texto = document.getElementById('participantes').value;
     participantes = texto.split(",");
