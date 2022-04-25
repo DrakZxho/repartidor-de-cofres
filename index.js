@@ -3,13 +3,14 @@ let participantes;
 let cofres;
 
 function repartir(){
-    premios = [];
     cofres = document.getElementById('cofres').value * 5;
     let texto = document.getElementById('participantes').value;
     participantes = texto.split(",");
 
     for(let i = 0; i < participantes.length; i++){
-        premios.push(0);  
+        if(premios[i]) {
+            premios[i]=0;
+        }else premios.push(0);  
     }
     for(let i = 0; i < cofres; i++){
         let aleatorio =  Math.floor(Math.random()*(participantes.length));
