@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <title>Repartidor de cofres</title>
+        <link rel="icon" href="yodeling.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
+        <style>
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            
+            /* Firefox */
+            input[type=number] {
+              -moz-appearance: textfield;
+            }
+        </style>
+        <link rel="stylesheet" href="index.css"/>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div id="conjunto">
+            <img id="yodelingCard" src="./yodeling.png" alt="YODELING"/> 
+            <div id="formulario">
+                <label for="participantes">Participantes: </label><br/>       
+                <input type="text" name="participantes" id="participantes"><br/>    
+                <input type="button" value="YODELING" id="repartir" class="boton" onclick="yodeling();">
+            </div>
+            <div id="resultado">
+            </div>
+            <input type="button" value="VOLVER" id="volver" class="boton" onclick="back();">
+            <audio id="musica" src="./yodeling.mp3"></audio>
+        </div>
+    </body>
+</html>

@@ -1,6 +1,7 @@
 let premios = new Array;
 let participantes;
 let cofres;
+let cofresYodeling;
 
 function repartir(){
     cofres = document.getElementById('cofres').value * 5;
@@ -45,5 +46,61 @@ function mostrar(){
     resultado += "<label for=\"intervalo\">Mostrar cada: </label><br/>";       
     resultado += "<input type=\"number\" name=\"intervalo\" id=\"intervalo\" value=\"" + intervalo + "\"><br/>";
     resultado += "<input type=\"button\" value=\"MOSTRAR\" id=\"mostrar\" class=\"boton\" onclick=\"mostrar();\">";
+    document.getElementById("resultado").innerHTML = resultado;
+};
+
+function toYodeling(){
+    window.location.href += "yodeling.html";
+}
+
+function back(){
+    history.back();
+}
+
+function yodeling(){
+    cofresYodeling = 0;
+    let texto = document.getElementById('participantes').value;
+    participantes = texto.split(",");
+
+    for(let i = 0; i < participantes.length; i++){
+        if(premios[i]) {
+            premios[i]=0;
+        }else premios.push(0);  
+    }
+
+    document.getElementById("musica").play();
+    document.getElementById("musica").volume = 0.2;
+
+    mostrarYodeling();
+
+    setTimeout(sumarYodeling,2000);
+
+    const interval = setInterval(sumarYodeling,15000);
+
+    mostrarYodeling();
+}
+
+function sumarYodeling(){
+    let aleatorio =  Math.floor(Math.random()*(participantes.length));
+    premios[aleatorio] += 5;
+    cofresYodeling += 5;
+    if(cofresYodeling > 100){
+        clearInterval(interval);
+    }
+
+    mostrarYodeling();
+}
+
+function mostrarYodeling(){
+    let resultado = "<table><tr>";
+    resultado += "<th>NOMBRE</th><th>COFRES</th>";
+    resultado += "</tr>";
+
+    for (let i = 0; i < participantes.length; i++){
+        resultado += "<tr><td class=\"name\">"+participantes[i]+"</td><td class=\"amount\">"+premios[i]+"</td></tr>";
+    }     
+
+    resultado += "</table>";
+    //resultado += "<p>Cofres repartidos <strong>" + cofres + "</strong>.</p>";
     document.getElementById("resultado").innerHTML = resultado;
 };
