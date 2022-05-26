@@ -54,7 +54,7 @@ function toYodeling(){
 }
 
 function back(){
-    window.location.replace("/");
+    window.location.replace("/repartidor-de-cofres");
 }
 
 function yodeling(){
