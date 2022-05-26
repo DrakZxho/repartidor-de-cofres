@@ -54,8 +54,7 @@ function toYodeling(){
 }
 
 function back(){
-    //history.back();
-    history.replaceState("/");
+    window.location.replace("/");
 }
 
 function yodeling(){
