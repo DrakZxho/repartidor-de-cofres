@@ -50,7 +50,7 @@ function mostrar(){
 };
 
 function toYodeling(){
-    window.location.href += "yodeling.html";
+    window.location.href += "/yodeling";
 }
 
 function back(){
