@@ -61,6 +61,7 @@ function yodeling(){
 
     document.getElementById("yodeling").disabled = true;
     document.getElementById("yodeling").classList.add("disabled");
+    document.getElementById("yodelingCard").classList.add("animated");
 
     cofresYodeling = 0;
     let texto = document.getElementById('participantes').value;
@@ -92,6 +93,7 @@ function yodeling(){
             clearInterval(interval);
             document.getElementById("yodeling").disabled = false;
             document.getElementById("yodeling").classList.remove("disabled");
+            document.getElementById("yodelingCard").classList.remove("animated");
         }
 
         mostrarYodeling();

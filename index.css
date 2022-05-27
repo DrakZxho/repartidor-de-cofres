@@ -73,3 +73,16 @@ table{
     font-size: 14px;
     box-shadow: 3px 3px #5e1b3dc9;
 }
+.animated{
+    border: 5px solid #eb4698;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes animation {
+    0%      {border: 5px solid #eb4698;}
+    25%     {border: 10px solid #9923cf;}
+    50%     {border: 15px solid #2c2fc9;}
+    75%     {border: 10px solid #136da1;}
+    100%    {border: 5px solid #f3e525;}
+  }
