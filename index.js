@@ -73,25 +73,24 @@ function yodeling(){
 
     mostrarYodeling();
 
-    setTimeout(sumarYodeling,2000);
-
-    const interval = setInterval(sumarYodeling,500);
+    const interval = setInterval(sumarYodeling,1000);
 
     mostrarYodeling();
-}
 
-function sumarYodeling(){
-    let aleatorio =  Math.floor(Math.random()*(participantes.length));
-    premios[aleatorio] += 5;
-    cofresYodeling += 5;
-    if(cofresYodeling > 100){
-        clearInterval(interval);
-        document.getElementById("musica").stop();
+    function sumarYodeling(){
+        let aleatorio =  Math.floor(Math.random()*(participantes.length));
+        cofresYodeling += 5;
+        premios[aleatorio] += 5;
+        
+        if(cofresYodeling >= 100){
+            document.getElementById("musica").pause();
+            document.getElementById("musica").load();
+            clearInterval(interval);              
+        }
+
+        mostrarYodeling();
     }
-
-    mostrarYodeling();
 }
-
 function mostrarYodeling(){
     let resultado = "<table><tr>";
     resultado += "<th>NOMBRE</th><th>COFRES</th>";
