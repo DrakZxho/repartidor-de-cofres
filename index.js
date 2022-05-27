@@ -75,7 +75,7 @@ function yodeling(){
 
     setTimeout(sumarYodeling,2000);
 
-    const interval = setInterval(sumarYodeling,15000);
+    const interval = setInterval(sumarYodeling,500);
 
     mostrarYodeling();
 }
@@ -86,6 +86,7 @@ function sumarYodeling(){
     cofresYodeling += 5;
     if(cofresYodeling > 100){
         clearInterval(interval);
+        document.getElementById("musica").stop();
     }
 
     mostrarYodeling();
