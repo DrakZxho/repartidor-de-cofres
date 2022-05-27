@@ -58,6 +58,9 @@ function back(){
 }
 
 function yodeling(){
+
+    document.getElementById("yodeling").disabled = true;
+
     cofresYodeling = 0;
     let texto = document.getElementById('participantes').value;
     participantes = texto.split(",");
@@ -85,7 +88,8 @@ function yodeling(){
         if(cofresYodeling >= 100){
             document.getElementById("musica").pause();
             document.getElementById("musica").load();
-            clearInterval(interval);              
+            clearInterval(interval);
+            document.getElementById("yodeling").disabled = false;  
         }
 
         mostrarYodeling();
