@@ -60,6 +60,7 @@ function back(){
 function yodeling(){
 
     document.getElementById("yodeling").disabled = true;
+    document.getElementById("yodeling").classList.add("disabled");
 
     cofresYodeling = 0;
     let texto = document.getElementById('participantes').value;
@@ -76,7 +77,9 @@ function yodeling(){
 
     mostrarYodeling();
 
-    const interval = setInterval(sumarYodeling,1000);
+    sumarYodeling();
+
+    const interval = setInterval(sumarYodeling,10000);
 
     mostrarYodeling();
 
@@ -85,11 +88,10 @@ function yodeling(){
         cofresYodeling += 5;
         premios[aleatorio] += 5;
         
-        if(cofresYodeling >= 100){
-            document.getElementById("musica").pause();
-            document.getElementById("musica").load();
+        if(cofresYodeling >= 155){
             clearInterval(interval);
-            document.getElementById("yodeling").disabled = false;  
+            document.getElementById("yodeling").disabled = false;
+            document.getElementById("yodeling").classList.remove("disabled");
         }
 
         mostrarYodeling();

@@ -60,3 +60,16 @@ table{
 #yodelingCard{
     margin: 20px auto;
 }
+.boton.disabled{
+    border-radius: 20px;
+    background-color: #9c6f86;
+    border: 1px solid #5e1b3c;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    box-shadow: 3px 3px #5e1b3dc9;
+}
