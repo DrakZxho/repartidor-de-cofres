@@ -73,7 +73,7 @@ function yodeling(){
     }
 
     mostrarYodeling();    
-    document.getElementById("yodelingTable").classList.add("animated");
+    document.getElementById("conjunto").classList.add("animated");
 
     document.getElementById("musica").play();
     document.getElementById("musica").volume = 0.2;
@@ -93,14 +93,14 @@ function yodeling(){
             clearInterval(interval);
             document.getElementById("yodeling").disabled = false;
             document.getElementById("yodeling").classList.remove("disabled");
-            document.getElementById("yodelingTable").classList.remove("animated");
+            document.getElementById("conjunto").classList.remove("animated");
         }
 
         mostrarYodeling();
     }
 }
 function mostrarYodeling(){
-    let resultado = "<table id=\"yodelingTable\"><tr>";
+    let resultado = "<table><tr>";
     resultado += "<th>NOMBRE</th><th>COFRES</th>";
     resultado += "</tr>";
 
