@@ -61,10 +61,6 @@ function yodeling(){
 
     document.getElementById("yodeling").disabled = true;
     document.getElementById("yodeling").classList.add("disabled");
-    
-    mostrarYodeling();
-    
-    document.getElementById("yodelingTable").classList.add("animated");
 
     cofresYodeling = 0;
     let texto = document.getElementById('participantes').value;
@@ -75,6 +71,9 @@ function yodeling(){
             premios[i]=0;
         }else premios.push(0);  
     }
+
+    mostrarYodeling();    
+    document.getElementById("yodelingTable").classList.add("animated");
 
     document.getElementById("musica").play();
     document.getElementById("musica").volume = 0.2;
