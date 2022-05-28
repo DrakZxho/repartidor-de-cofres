@@ -61,6 +61,9 @@ function yodeling(){
 
     document.getElementById("yodeling").disabled = true;
     document.getElementById("yodeling").classList.add("disabled");
+    
+    mostrarYodeling();
+    
     document.getElementById("yodelingTable").classList.add("animated");
 
     cofresYodeling = 0;
@@ -75,8 +78,6 @@ function yodeling(){
 
     document.getElementById("musica").play();
     document.getElementById("musica").volume = 0.2;
-
-    mostrarYodeling();
 
     sumarYodeling();
 
