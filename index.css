@@ -57,7 +57,7 @@ table{
 #participantes{
     width: 100%;
 }
-#yodelingCard{
+#yodelingCard, #dindosario1, #dindosario2{
     margin: 20px auto;
 }
 .boton.disabled{
