@@ -76,7 +76,7 @@ function yodeling(){
     document.getElementById("conjunto").classList.add("animated");
 
     document.getElementById("musica").play();
-    document.getElementById("musica").volume = 0.2;
+    document.getElementById("musica").volume = 0.1;
 
     sumarYodeling();
 
